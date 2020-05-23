@@ -18,3 +18,7 @@ Backup of *.doc*
 __pycache__/
 
 *.DS_Store
+
+# vim
+**.swp
+**.swo
