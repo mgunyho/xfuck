@@ -1,1 +1,2 @@
 pdfminer.six>=20200517
+reportlab>=3.5
