@@ -1,4 +1,4 @@
-# xfuck (working title)
+# xfuck
 
 Language inspired by this xkcd:
 
