@@ -10,6 +10,17 @@ An xfuck compiler takes a pdf file as input and converts to brainfuck (using a p
 
 - Cross platform: pdf files can be created on all platforms. Use anything as an IDE: Word, Latex, ... The possibilities are truly endless.
 
+## TODO:
+
+- Brainfuck to xfuck (typesetted pdf)
+  - for testing: X (e.g. python) to brainfuck compiling workflow 
+- xfuck to brainfuck to local binary executable
+- xfuck to brainfuck ASCII
+- example fies in latex, word, libreoffice, html (export to pdf using e.g. browser) 
+- ???
+- Profit.
+- Ebin 2 min vidyo
+
 ## Language specification
 
 xfuck source files are PDF files. The first eight characters of the pdf should have eight different fonts, each corresponding to [one letter](https://en.wikipedia.org/wiki/Brainfuck#Commands) of brainfuck.
