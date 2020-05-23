@@ -21,7 +21,12 @@ def main(argv):
         elif a0.endswith(".pdf"):
             #print("PDF source file")
             filepath = a0
-            brainfuck.evaluate(xf2bf(filepath))
+            src = xf2bf(filepath)
+            if len(argv) >= 2 and argv[1].endswith(".bf"):
+                with open(argv[1], "w") as f:
+                    f.write(src)
+            else:
+                brainfuck.evaluate(src)
         else:
             print("use: xfk path/to/source.(bf|pdf)")
     else:
@@ -29,8 +34,6 @@ def main(argv):
 
 if __name__ == '__main__':
     main(sys.argv[1:])
-
-
 
 """
 r = PdfReader(sys.argv[1], decompress=True)
