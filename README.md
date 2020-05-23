@@ -31,7 +31,7 @@ The only allowed text characters in the PDF are the character `'X'` or whitespac
 
 Install dependencies (python 3):
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Compile (in the repository root folder):
