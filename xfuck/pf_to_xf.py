@@ -24,7 +24,7 @@ bf_symbols = "><+-.,[]"
 
 hw = "+[-[<<[+[--->]-[<<<]]]>>>-]>-.---.>..>.<<<<-.<+.>>>>>.>.<<.<-."
 
-PDF_NAME = "hello.pdf"
+PDF_NAME = "../examples/hello-2.pdf"
 
 doc = SimpleDocTemplate(PDF_NAME,pagesize=A4,
                         rightMargin=72,leftMargin=72,
