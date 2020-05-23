@@ -36,4 +36,11 @@ To convert a brainfuck source file to an xfuck-compatible pdf, run the command
 ```
 ./xfk source.bf
 ```
-By default, this command executes the code in `inputfile.pdf`. If the `--compile` flag is given, it instead outputs the contents of the input file as brainfuck source code to stdout.
+This creates the file `source.pdf`.
+
+
+## Language specification
+
+xfuck source files are PDF files. The first eight characters of the pdf should have eight different fonts, each corresponding to [one letter](https://en.wikipedia.org/wiki/Brainfuck#Commands) of brainfuck.
+
+Originally (version 1.0, released 2020-05-23 8:42), the only allowed text characters in the PDF was the character `'X'` and the string `X Æ A-12`, but in version 2.0 (released 2020-05-23 17:25), all characters were allowed. Whitespace is ignored. Other content, such as images or embedded SWF files are ignored.
