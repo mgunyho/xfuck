@@ -12,14 +12,7 @@ An xfuck compiler takes a pdf file as input and converts to brainfuck (using a p
 
 ## TODO:
 
-- Brainfuck to xfuck (typesetted pdf)
-  - for testing: X (e.g. python) to brainfuck compiling workflow 
-- xfuck to brainfuck to local binary executable
-- xfuck to brainfuck ASCII
-- example fies in latex, word, libreoffice, html (export to pdf using e.g. browser) 
-- ???
-- Profit.
-- Ebin 2 min vidyo
+- example fies in latex, word, libreoffice, html (export to pdf using e.g. browser)
 
 ## Language specification
 
