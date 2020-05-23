@@ -18,10 +18,11 @@ brainfuck_chars = "><+-.,[]"
 
 src = ""
 
-for token in r.pages[0].Contents.stream.replace("\n", "").split(" "):
-    if token not in key:
-        continue
-    src += brainfuck_chars[keys.index(token)]
+for p in r.pages:
+  for token in p.Contents.stream.replace("\n", "").split(" "):
+      if token not in key:
+          continue
+      src += brainfuck_chars[keys.index(token)]
 
 if len(sys.argv) > 2:
     skip = int(sys.argv[2])
@@ -29,4 +30,3 @@ else:
     skip = 0
 
 brainfuck.evaluate(src[skip+8:])
-#pprint(brainfuck_chars[r.pages[0].Contents.stream.split().index())
