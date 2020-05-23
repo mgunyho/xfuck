@@ -14,11 +14,11 @@ def main(argv):
     filepath = ""
     if len(argv) >= 1:
         a0 = argv[0]
-        if ".bf" in a0:
+        if a0.endswith(".bf"):
             print("Brainfuck source file, converting into xfuck-pdf")
             r = bf_file_2_pdf(a0)
             print("Created result xfuck-pdf: %s" % r)
-        elif ".pdf" in a0:
+        elif a0.endswith(".pdf"):
             #print("PDF source file")
             filepath = a0
             brainfuck.evaluate(xf2bf(filepath))
