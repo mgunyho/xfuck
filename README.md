@@ -1,6 +1,6 @@
 # xfuck
 
-Language inspired by this xkcd:
+Esoteric programming language inspired by this xkcd:
 
 ![https://imgs.xkcd.com/comics/x.png](https://imgs.xkcd.com/comics/x.png)
 
