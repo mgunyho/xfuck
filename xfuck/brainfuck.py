@@ -9,7 +9,7 @@
 # Usage: ./brainfuck.py [FILE]
 
 import sys
-import getch
+from .import getch
 
 def execute(filename):
   f = open(filename, "r")
