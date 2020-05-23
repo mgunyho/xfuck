@@ -1,18 +1,40 @@
 #!/usr/bin/env python3
-
+"""
+Conver .bf brainfuck string into font encoded .pdf or vice versa
+"""
 import sys
-
-from pdfrw import PdfReader
-from xfuck.fonts import get_key
 from xfuck import brainfuck
+from xfuck.bf_to_xf import bf_file_2_pdf
+#from pprint import pprint
+#from pdfrw import PdfReader
+#from xfuck.fonts import get_key
 
-#TODO: get rid of white space
+def main(argv):
+    filepath = ""
+    if len(argv) >= 1:
+        a0 = argv[0]
+        if ".bf" in a0:
+            print("Brainfuck source file, converting into xfuck-pdf")
+            r = bf_file_2_pdf(a0)
+            print("Created result xfuck-pdf: %s" % r)
+        elif ".pdf" in a0:
+            print("PDF source file")
+            filepath = a0
+        else:
+            print("use: xfk path/to/source.(bf|pdf)")
+    else:
+        print("No arguments")
 
+if __name__ == '__main__':
+    main(sys.argv[1:])
+
+
+
+"""
 r = PdfReader(sys.argv[1], decompress=True)
 key = get_key(r)
 keys = list(key.keys())
 
-from pprint import pprint
 
 brainfuck_chars = "><+-.,[]"
 
@@ -30,3 +52,4 @@ else:
     skip = 0
 
 brainfuck.evaluate(src[skip+8:])
+"""
