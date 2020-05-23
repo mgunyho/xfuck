@@ -16,6 +16,9 @@ def execute(filename):
   evaluate(f.read())
   f.close()
 
+# order based on wikipedia page
+charset = "><+-.,[]"
+assert len(charset) == 8
 
 def evaluate(code):
   code     = cleanup(list(code))
