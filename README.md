@@ -1,10 +1,12 @@
 # xfuck
 
-Esoteric programming language inspired by [this xkcd](https://xkcd.com/2309/):
+`xfuck` (pronounced 'crossfuck') is an esoteric programming language based on fonts. It is revolutionary, portable and minimal - an interpreter can be written in less than 300 lines of Python.
+The source code of an xfuck program is the fonts embedded in a PDF, interpreted as brainfuck commands. This provides incredible flexibility, and a rich ecosystem of literally billions of already existing valid programs.
+
+xfuck was inspired by [this xkcd](https://xkcd.com/2309/):
 
 ![https://imgs.xkcd.com/comics/x.png](https://imgs.xkcd.com/comics/x.png)
 
-An xfuck compiler takes a pdf file as input and converts to brainfuck (using a python script), where eight different fonts correspond to the eight symbols of brainfuck.
 
 ## Random ideas / features
 
