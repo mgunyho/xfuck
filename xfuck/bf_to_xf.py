@@ -13,15 +13,6 @@ from reportlab.lib.enums import TA_JUSTIFY
 from pathlib import Path
 import os
 
-# Initialize all brainfuck font associations
-pdfmetrics.registerFont(TTFont('>', 'Arial.ttf'))
-pdfmetrics.registerFont(TTFont('<', 'Ayuthaya.ttf'))
-pdfmetrics.registerFont(TTFont('+', 'Sathu.ttf'))
-pdfmetrics.registerFont(TTFont('-', 'Chalkduster.ttf'))
-pdfmetrics.registerFont(TTFont('.', 'Courier New.ttf'))
-pdfmetrics.registerFont(TTFont(',', 'Herculanum.ttf'))
-pdfmetrics.registerFont(TTFont('[', 'Impact.ttf'))
-pdfmetrics.registerFont(TTFont(']', 'Krungthep.ttf'))
 
 BF_CHARS = "><+-.,[]" # Characters of brainfuck
 
@@ -36,6 +27,17 @@ def bf_string_2_pdf(brainfuck_string, file_name):
     """
     Creates PDF file (file_name) that includes brainfuck code (brainfuck_string) encoded using fonts defined above.
     """
+
+    # Initialize all brainfuck font associations
+    pdfmetrics.registerFont(TTFont('>', 'Arial.ttf'))
+    pdfmetrics.registerFont(TTFont('<', 'Ayuthaya.ttf'))
+    pdfmetrics.registerFont(TTFont('+', 'Sathu.ttf'))
+    pdfmetrics.registerFont(TTFont('-', 'Chalkduster.ttf'))
+    pdfmetrics.registerFont(TTFont('.', 'Courier New.ttf'))
+    pdfmetrics.registerFont(TTFont(',', 'Herculanum.ttf'))
+    pdfmetrics.registerFont(TTFont('[', 'Impact.ttf'))
+    pdfmetrics.registerFont(TTFont(']', 'Krungthep.ttf'))
+
     doc = SimpleDocTemplate(file_name, pagesize=A4,
                             rightMargin=72, leftMargin=72,
                             topMargin=72, bottomMargin=18)
