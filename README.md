@@ -1,8 +1,8 @@
 # xfuck
 
 `xfuck` (pronounced 'crossfuck') is an esoteric programming language based on fonts. It is revolutionary, portable and minimal - an interpreter can be written in less than 300 lines of Python.
-The source code of an xfuck program is the fonts embedded in a PDF, interpreted as brainfuck commands. This provides incredible flexibility, and a rich ecosystem of literally billions of already existing valid programs.
-In addition, PDF output is so ubiquitous that xfuck enables the user to write their program in a wide range of development environments, which were previously unsuitable for coding. These include (but are no limited to) Microsof Word, Excel, LaTeX, HTML files (via printing to PDF), or even by hand on a plain piece of paper and the help of an OCR program. The possibilities are truly endless.
+The source code of an xfuck program consists the fonts embedded in a PDF, interpreted as brainfuck commands. This provides incredible flexibility, and a rich ecosystem of literally billions of already existing valid programs.
+In addition, PDF output is so ubiquitous that xfuck enables the user to program in a wide range of development environments, which were previously unsuitable for programming. These include (but are not limited to) Microsoft Word, Excel, LaTeX, HTML files (via printing to PDF), or even by hand on a plain piece of paper with the help of an OCR program. The possibilities are truly endless.
 
 For example, a program that prints 'hello world' looks like this:
 
@@ -41,6 +41,6 @@ This creates the file `source.pdf`.
 
 ## Language specification
 
-xfuck source files are PDF files. The first eight characters of the pdf should have eight different fonts, each corresponding to [one letter](https://en.wikipedia.org/wiki/Brainfuck#Commands) of brainfuck.
+xfuck source files are PDF files. The first eight characters of the pdf should have eight different fonts, each corresponding to [one command](https://en.wikipedia.org/wiki/Brainfuck#Commands) of brainfuck. Whitespace is ignored.
 
-Originally (version 1.0, released 2020-05-23 8:42), the only allowed text characters in the PDF was the character `'X'` and the string `X Æ A-12`, but in version 2.0 (released 2020-05-23 17:25), all characters were allowed. Whitespace is ignored. Other content, such as images or embedded SWF files are ignored.
+Originally (version 1.0, released 2020-05-23 8:42), the only allowed text in the PDF were the character `'X'` and the string `X Æ A-12`. This was extended in version 2.0 of the specificatoin (released 2020-05-23 17:25), so that all characters are allowed. Other content, such as images or embedded SWF files are ignored.
