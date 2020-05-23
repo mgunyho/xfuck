@@ -11,6 +11,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_JUSTIFY
 from pathlib import Path
+import os
 
 # Initialize all brainfuck font associations
 pdfmetrics.registerFont(TTFont('>', 'Arial.ttf'))
@@ -67,13 +68,16 @@ def bf_file_2_pdf(path_to_bf):
     Gets path to brainfuck file (path/to/brain.bf) as parameter,
     and produces pdf into same location where script is run
     """
-    with open('path_to_bf', 'r') as file:
+    with open(path_to_bf, 'r') as file:
         bf = file.read().replace('\n', '')
 
+
+
     name = Path(path_to_bf).stem
-
-    bf_string_2_pdf(bf, name+".pdf")
-
+    target = os.path.dirname(path_to_bf) + "/" + name + ".pdf"
+    bf_string_2_pdf(bf, target)
+    
+    return target
 
 if __name__ == '__main__':
     hw = "+[-[<<[+[--->]-[<<<]]]>>>-]>-.---.>..>.<<<<-.<+.>>>>>.>.<<.<-."
