@@ -5,6 +5,7 @@ Conver .bf brainfuck string into font encoded .pdf or vice versa
 import sys
 from xfuck import brainfuck
 from xfuck.bf_to_xf import bf_file_2_pdf
+from xfuck.xf2bf import xf2bf
 #from pprint import pprint
 #from pdfrw import PdfReader
 #from xfuck.fonts import get_key
@@ -18,8 +19,9 @@ def main(argv):
             r = bf_file_2_pdf(a0)
             print("Created result xfuck-pdf: %s" % r)
         elif ".pdf" in a0:
-            print("PDF source file")
+            #print("PDF source file")
             filepath = a0
+            brainfuck.evaluate(xf2bf(filepath))
         else:
             print("use: xfk path/to/source.(bf|pdf)")
     else:
