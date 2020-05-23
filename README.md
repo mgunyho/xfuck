@@ -26,3 +26,16 @@ An xfuck compiler takes a pdf file as input and converts to brainfuck (using a p
 xfuck source files are PDF files. The first eight characters of the pdf should have eight different fonts, each corresponding to [one letter](https://en.wikipedia.org/wiki/Brainfuck#Commands) of brainfuck.
 
 The only allowed text characters in the PDF are the character `'X'` or whitespace. Other characters are a syntax error. An exception is the string `X Æ A-12`, which is the same as  a single `X`. Other content, such as images or embedded SWF files are ignored.
+
+## Usage instructions
+
+Install dependencies (python 3):
+```
+pip install requirements.txt
+```
+
+Compile (in the repository root folder):
+```
+./xfk inputfile.pdf [--compile]
+```
+By default, this command executes the code in `inputfile.pdf`. If the `--compile` flag is given, it instead outputs the contents of the input file as brainfuck source code to stdout.
