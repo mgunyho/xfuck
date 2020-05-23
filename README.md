@@ -2,6 +2,13 @@
 
 `xfuck` (pronounced 'crossfuck') is an esoteric programming language based on fonts. It is revolutionary, portable and minimal - an interpreter can be written in less than 300 lines of Python.
 The source code of an xfuck program is the fonts embedded in a PDF, interpreted as brainfuck commands. This provides incredible flexibility, and a rich ecosystem of literally billions of already existing valid programs.
+In addition, PDF output is so ubiquitous that xfuck enables the user to write their program in a wide range of development environments, which were previously unsuitable for coding. These include (but are no limited to) Microsof Word, Excel, LaTeX, HTML files (via printing to PDF), or even by hand on a plain piece of paper and the help of an OCR program.
+
+For example, a program that prints 'hello world' looks like this:
+
+![hello-x](doc/screenshot-hello-x.png)
+
+You can see the full source code for this example in [`examples/hello-x.pdf`](examples/hello-x.pdf).
 
 xfuck was inspired by [this xkcd](https://xkcd.com/2309/):
 
