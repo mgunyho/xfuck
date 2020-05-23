@@ -1,6 +1,10 @@
 # xfuck (working title)
 
-Language inspoird by https://xkcd.com/2309/. Input is a pdf file and is converted to brainfuck (by a python script)
+Language inspired by this xkcd:
+
+![https://imgs.xkcd.com/comics/x.png](https://imgs.xkcd.com/comics/x.png)
+
+Input is a pdf file and is converted to brainfuck (by a python script)
 
 ## Random ideas / features
 
