@@ -15,3 +15,6 @@ Backup of *.doc*
 # PowerPoint temporary
 ~$*.ppt*
 
+__pycache__/
+
+*.DS_Store
